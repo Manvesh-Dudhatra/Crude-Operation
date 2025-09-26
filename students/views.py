@@ -22,10 +22,7 @@ def displayStudent(request):
     students = Student.objects.all()
     student1 = Student.objects.filter(id__lt =5).values()
     student2 = Student.objects.values_list('email', 'name')
-    # student2 = Student.objects.first()
-    
-    
-    
+
     context = {
         "students":students,
         "student":student2,
@@ -50,20 +47,4 @@ def deleteStudent(request, id):
     student = get_object_or_404(Student, id=id)
     student.delete()
     return redirect("display-student")
-
-# def main(request):
-#     template = loader.get_templatate("main.html")
-#     students = Student.objects.all()
-#     context = {
-#         "students":students
-
-#     }
-
-#     return HttpResponse(template.render(request, context))
-
-
-    
-
-
-
 
