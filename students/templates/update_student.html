@@ -1,0 +1,59 @@
+{% extends 'master.html' %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body> -->
+    {% block title %}
+    Update Student
+    {% endblock %}
+    {% block links %}
+       <link rel="stylesheet" href="{% static 'css/update.css' %}">
+    {% endblock %}
+
+    {% block content %}
+        <div class="update-form">
+            <div class="form-heading">
+                <h3>Update Student</h3>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1" value = {{students.name}} readonly>
+                </div>
+                 <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" value = {{students.email}}>
+                </div>
+                 <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Enter Standard</label>
+                    <input type="text" name="std" class="form-control" id="exampleFormControlInput1"  value = {{students.std}}>
+                </div>
+                 <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3">Update Student</button>
+                </div>
+
+            </form>
+
+        </div>
+        {% endblock %}
+
+
+
+
+       
+
+  
+    
+    <!-- </body>
+</html> -->
+
+

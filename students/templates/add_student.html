@@ -1,0 +1,54 @@
+{% extends 'master.html' %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body> -->
+{% block title%}
+Add Student
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/add.css' %}">
+{% endblock %}
+    
+{% block content %}
+      
+        <div class="add-form">
+            <div class="form-heading">
+                <h3>Add Student</h3>
+            </div>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleFormControlInput1">
+                </div>
+                 <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1">
+                </div>
+                 <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Enter Standard</label>
+                    <input type="text" name="std" class="form-control" id="exampleFormControlInput1">
+                </div>
+                 <div class="mb-3">
+                    <button type="submit" class="btn btn-primary mb-3">Add Student</button>
+                </div>
+
+            </form>
+
+        </div>
+    {% endblock %}
+    <!-- </body>
+
+</html> -->
+
+

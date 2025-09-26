@@ -1,0 +1,54 @@
+.navbar-top{
+  height: 60px;
+  background-color: antiquewhite;
+}
+.navbar-top .navigation{
+  display: flex;
+  align-items:center;
+  padding-top: 20px; 
+  gap: 25px;
+  margin-left: 20px;
+}
+.navbar-top .navigation a{
+
+  text-decoration: none;
+}
+.show-data-heading{
+  padding-top: 20px;
+  margin-left: 20px;
+  display: flex;
+  margin-bottom: 20px;
+  
+}
+.show-data-heading .item{
+  width: 15%;
+  font-weight: bold;
+}
+.show-data{
+  margin-left: 20px;
+  display: flex;
+  
+}
+.show-data div {
+  width: 15%;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.btnSubmit
+{
+  background-color: red;
+  color:white;
+  width: 100px;
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner{
+  width: 300px;
+  height: 300px;
+  background-color: black;
+
+}

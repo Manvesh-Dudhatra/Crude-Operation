@@ -1,0 +1,61 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %} Display Data{% endblock %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<script src="{% static 'js/main.js' %}"></script>
+{% endblock %}
+
+  {% block content %}
+   
+
+<div class="navbar-top">
+    <nav class="navigation">
+        <a href="{% url 'add-student' %}">Add Student</a>
+        <a href="{% url 'display-student'%}">Show Student</a>
+
+    </nav>
+    
+</div>
+
+<div class="show-data-heading">
+    <div class="item">No</div>
+    <div class="item">Name</div>
+    <div class="item">Email</div>
+    <div class="item">Standard</div>
+   
+</div>
+ {% for student in students %}
+<div class="show-data">
+    <div >{{forloop.counter}}</div>
+    <div>{{student.name}}</div>
+    <div>{{student.email}}</div>
+    <div>{{student.std}}</div>
+    <div>
+          <form action="{% url 'update-student' student.id %}" onclick="return getConfirmUpdate(); ">
+                        <input type="submit" value="Update" class="btnSubmit">
+                    </form>
+    </div>
+    <div class="show-data">
+        <form action="{% url 'delete-student' student.id %}" onclick="return getConfirmDelete();" >
+                        <input type="submit" value="Delete" class="btnSubmit">
+                    </form>
+    </div>
+</div>
+
+{% endfor %}
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+    
